@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tv_calcularAutonomia"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        style="@style/TextAppearance.MaterialComponents.Body2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="@string/calcularAutonomia"
+        android:textSize="20dp"
+        android:layout_margin="16dp"/>
+
+    <EditText
+        android:id="@+id/et_precoLitro"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/precoLitro"
+        android:inputType="numberDecimal"
+        android:maxLength="10"
+        android:maxLines="1"
+        android:ems="10"
+        android:layout_margin="16dp"
+        android:padding="16dp"
+        app:layout_constraintTop_toBottomOf="@id/tv_calcularAutonomia"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <EditText
+        android:id="@+id/et_kmPercorrido"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Km percorrido"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:layout_margin="16dp"
+        android:padding="16dp"
+        android:maxLength="10"
+        android:maxLines="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/et_precoLitro" />
+
+    <TextView
+        android:id="@+id/tv_resultado"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        style="@style/TextAppearance.MaterialComponents.Body2"
+        app:layout_constraintTop_toBottomOf="@+id/et_kmPercorrido"
+        app:layout_constraintStart_toStartOf="@+id/et_kmPercorrido"
+        app:layout_constraintEnd_toEndOf="@+id/et_kmPercorrido"
+        android:layout_marginLeft="150dp"
+        android:layout_marginRight="180dp"
+        android:textSize="20dp"/>
+
+    <Button
+        android:id="@+id/bt_calcular"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:padding="16dp"
+        android:text="Calcular"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_resultado"
+        android:backgroundTint="@color/gray"/>
+
+    <ImageView
+        android:id="@+id/ic_voltar"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_margin="16dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        app:layout_constraintBottom_toTopOf="@+id/et_precoLitro"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tv_calcularAutonomia"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/baseline_arrow_circle_left_24"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

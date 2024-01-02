@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Dio1</string>
+    <string name="carros_populares">Carros Populares</string>
+    <string name="preco">Preço: </string>
+    <string name="preco_value">R$ 78.990,00</string>
+    <string name="bateria">Bateria </string>
+    <string name="consumo_value">13 Km/l</string>
+    <string name="mais_vendidos">Mais vendidos</string>
+    <string name="potencia">Potência</string>
+    <string name="recarga">Recarga</string>
+    <string name="recargaValue">Recarga Value</string>
+    <string name="consumoValueEstrada">16,5 km/l</string>
+    <string name="carros">Carros</string>
+    <string name="precoLitro">Preço do litro</string>
+    <string name="calcularAutonomia">Calcular Autonomia</string>
+    <string name="no_wifi">Ops, internet não disponível :(</string>
+    <string name="response_error">Algo deu errado, por favor tente novamete mais tarde !</string>
+    <string name="saved_calc">Saved_calc</string>
+</resources>
