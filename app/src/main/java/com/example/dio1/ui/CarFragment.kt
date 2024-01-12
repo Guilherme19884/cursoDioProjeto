@@ -142,6 +142,9 @@ class CarFragment : Fragment() {
         val adapter = CarAdapter(lista);
         listaCarros.layoutManager = LinearLayoutManager(requireContext());
         listaCarros.adapter = adapter;
+        adapter.carItemListener = {carro ->
+            val bateria = carro.bateria
+        }
     }
 
     fun checkForInternet(context : Context?) : Boolean{
@@ -235,7 +238,8 @@ class CarFragment : Fragment() {
                             bateria = bateria,
                             potencia = potencia,
                             recarga = recarga,
-                            urlPhoto = urlPhoto
+                            urlPhoto = urlPhoto,
+                            isFavorite = false
                         )
                         carrosArray.add(model);
                     }

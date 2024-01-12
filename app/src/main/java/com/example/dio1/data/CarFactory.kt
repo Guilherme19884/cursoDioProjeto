@@ -11,7 +11,8 @@ object CarFactory {
             bateria = "Bateria",
             potencia = "13 km/l",
             recarga = "16,5 Km/l",
-            urlPhoto = "www.google.com"
+            urlPhoto = "www.google.com",
+            isFavorite = false
         ),
         Carro(
             id = 2,
@@ -19,7 +20,8 @@ object CarFactory {
             bateria = "bateria",
             potencia= "13 km/l",
             recarga = "16,5 Km/l",
-            urlPhoto = "www.google.com"
+            urlPhoto = "www.google.com",
+            isFavorite = false
         )
     )
 }
