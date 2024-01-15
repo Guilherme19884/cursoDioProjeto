@@ -1,5 +1,6 @@
 package com.example.dio1.ui
 
+import android.content.ContentValues
 import android.content.Context
 import android.content.Intent
 import android.health.connect.datatypes.units.Length
@@ -23,6 +24,15 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.dio1.Dominio.Carro
 import com.example.dio1.R
 import com.example.dio1.data.CarsApi
+import com.example.dio1.data.local.CarContract
+import com.example.dio1.data.local.CarContract.carEntry.COLUMN_NAME_BATERIA
+import com.example.dio1.data.local.CarContract.carEntry.COLUMN_NAME_POTENCIA
+import com.example.dio1.data.local.CarContract.carEntry.COLUMN_NAME_PRECO
+import com.example.dio1.data.local.CarContract.carEntry.COLUMN_NAME_RECARGA
+import com.example.dio1.data.local.CarContract.carEntry.COLUMN_NAME_URL_PHOTO
+import com.example.dio1.data.local.CarContract.carEntry.TABLE_NAME
+import com.example.dio1.data.local.CarRepository
+import com.example.dio1.data.local.CarsDbHelper
 import com.example.dio1.ui.adapter.CarAdapter
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import org.json.JSONArray
@@ -143,7 +153,7 @@ class CarFragment : Fragment() {
         listaCarros.layoutManager = LinearLayoutManager(requireContext());
         listaCarros.adapter = adapter;
         adapter.carItemListener = {carro ->
-            val bateria = carro.bateria
+            val isSaved = CarRepository(requireContext()).save(carro)
         }
     }
 
@@ -261,7 +271,7 @@ class CarFragment : Fragment() {
                             line?.let {
                                 result += line
                             }
-                        } while (line != null)
+                        } while (true)
                     } catch (ex: Exception) {
                         Log.e("Erro", "Erro ao parcelar Stream")
                     }

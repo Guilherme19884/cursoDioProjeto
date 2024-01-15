@@ -4,7 +4,8 @@ import android.provider.BaseColumns
 
 object CarContract {
 
-    object carEntry {
+    const val DATABASE_NAME = "db_car"
+    object carEntry : BaseColumns{
         const val TABLE_NAME = "Car"
         const val COLUMN_NAME_PRECO = "preco"
         const val COLUMN_NAME_BATERIA = "bateria"
